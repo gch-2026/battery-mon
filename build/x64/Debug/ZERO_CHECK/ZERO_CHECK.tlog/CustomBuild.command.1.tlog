@@ -1,0 +1,10 @@
+^C:\USERS\LENOVO\DESKTOP\BATTERY-MON\BUILD\CMAKEFILES\F2C9C6C744E451F9DF7AA5A6E3B5D5DF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/LENOVO/Desktop/battery-mon -BC:/Users/LENOVO/Desktop/battery-mon/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/LENOVO/Desktop/battery-mon/build/battery-mon.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
