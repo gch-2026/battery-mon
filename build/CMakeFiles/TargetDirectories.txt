@@ -1,3 +1,0 @@
-C:/Users/LENOVO/Desktop/battery-mon/build/CMakeFiles/demo.dir
-C:/Users/LENOVO/Desktop/battery-mon/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/LENOVO/Desktop/battery-mon/build/CMakeFiles/ZERO_CHECK.dir
