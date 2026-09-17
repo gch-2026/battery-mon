@@ -1,0 +1,22 @@
+name: CI                    # 流水线显示在 GitHub 页面上的名字
+
+on:                         # 什么时候触发
+  push:
+    branches: [main]        # 有人往 main 分支推送时
+  pull_request:             # 有人提 PR 时
+
+jobs:                       # 要做的事，可以有很多件
+  build:
+    name: 编译并运行
+    runs-on: ubuntu-latest  # GitHub 借你一台全新的 Ubuntu 虚拟机
+    steps:                  # 这台机器上依次执行的步骤
+      - uses: actions/checkout@v4   # 第一步固定动作：把你的代码拷进这台机器
+
+      - name: 配置
+        run: cmake -B build          # 后面每一步，就是你在本地敲过的命令
+
+      - name: 编译
+        run: cmake --build build
+
+      - name: 运行 demo
+        run: ./build/demo
