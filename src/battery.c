@@ -6,7 +6,7 @@
 
 int battery_percent(uint16_t voltage_mv) {
     if (voltage_mv <= BATTERY_MIN_MV) {
-        return 0;
+        return 1;
     }
     if (voltage_mv >= BATTERY_MAX_MV) {
         return 100;
